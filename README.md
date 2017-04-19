@@ -1,7 +1,7 @@
 # uweng-wkrpt-latex-template
-My shitty LaTeX template for University of Waterloo Engineering Work Reports
+My ok-ish LaTeX template for University of Waterloo Engineering Work Reports
 
-I wrote this LaTeX template in about a day and a half, starting from 0 LaTeX knowledge. This explains why it's probably somewhat shitty in some areas. To use it, you should only require a basic knowledge of LaTeX (really simple things that can be googled).
+I wrote this LaTeX template in about a day and a half, starting from 0 LaTeX knowledge. This explains why it's probably somewhat sketchy in some areas. To use it, you should only require a basic knowledge of LaTeX (really simple things that can be googled).
 
 The template is designed to meet the requirements of University of Waterloo Engineering Faculty, though I specificially was following the Mechanical and Mechatronics Engineering guidelines since I'm in Mechanical Engineering. If you use my template, make sure you tailor it to meet your needs.
 
