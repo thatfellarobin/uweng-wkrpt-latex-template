@@ -1,0 +1,118 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[autostyle]{csquotes}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{tocloft}
+\usepackage[titletoc,title]{appendix}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\doublespacing
+\MakeOuterQuote{"}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fill in the variables below %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dateofsubmittal}{April 16, 2017}
+\newcommand{\department}{Department of Mechanical and Mechatronics Engineering}
+\newcommand{\yourname}{Robin Liu}
+\newcommand{\youridnumber}{2050xxxx}
+\newcommand{\academicterm}{4A}
+\newcommand{\yourdiscipline}{Mechanical Engineering}
+\newcommand{\yourorganization}{Organization} % The company/organization you are writing this report for
+
+
+\begin{document}
+  \pagenumbering{gobble}
+  %
+  % Title page
+  \begin{titlepage}
+    \vspace*{\fill}
+    \centering
+    {\setstretch{1.0}
+    {\large{University of Waterloo}
+
+    \large{\department}
+
+    }}
+    \bigskip
+    \includegraphics[width=0.3\paperwidth]{uwlogo.jpg}
+
+    \bigskip\bigskip\bigskip
+      \textbf{\huge{Title}}
+
+    \bigskip\bigskip\bigskip
+    \large{Prepared for}
+
+      \bigskip
+      {\setstretch{1.0}
+      \textit{Organization}
+
+      }
+      \bigskip\bigskip
+    \large{Prepared by}
+
+      \bigskip
+      {\setstretch{1.0}
+      \yourname
+
+      ID \youridnumber
+
+      \academicterm\:\yourdiscipline
+
+      }
+      \dateofsubmittal{}
+
+    \bigskip\bigskip
+    \vspace*{\fill}
+  \end{titlepage}
+  %
+  \input{letterofsubmittal.tex} % Letter of Submittal
+  %
+  \clearpage
+  \tableofcontents\pagenumbering{roman}\setcounter{page}{1}
+  \clearpage
+  \addcontentsline{toc}{section}{\listfigurename}
+  \listoffigures
+  \clearpage
+  \addcontentsline{toc}{section}{\listtablename}
+  \listoftables
+  \clearpage
+  %
+  \input{summary.tex}
+  %
+  \clearpage
+  \pagenumbering{arabic}
+  %
+  \section{examplesection} % examples of stuff
+    Here's a statement to be cited \cite{example}.
+
+    \lipsum
+    \subsection{examplesubsection}
+      Below you'll find a figure, which is Figure \ref{fig:examplefigure}.
+
+      \lipsum[1]
+      \begin{figure}[h!]
+        \centering
+        \rule{1 cm}{1 cm}
+        \caption[Short caption for List of Figures]{This is the long version of the caption, and appears next to the figure}
+        \label{fig:examplefigure}
+      \end{figure}
+      \lipsum[2]
+  %
+  % Main Body
+  %   Introduction and/or background
+  %   Main stuff
+  % Conclusions and Recommendations
+  %
+  \clearpage
+  \addcontentsline{toc}{section}{References}
+  \bibliography{bibfile}
+  \bibliographystyle{ieeetr}
+  \clearpage
+  %
+  % Glossary if needed
+  \begin{appendices}
+    \section{Example appendix}
+      \lipsum[3]
+  \end{appendices}
+\end{document}
