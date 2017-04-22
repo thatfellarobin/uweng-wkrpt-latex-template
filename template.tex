@@ -15,10 +15,11 @@
 \newcommand{\dateofsubmittal}{April 16, 2017}
 \newcommand{\department}{Department of Mechanical and Mechatronics Engineering}
 \newcommand{\yourname}{Robin Liu}
-\newcommand{\youridnumber}{2050xxxx}
+\newcommand{\youridnumber}{20xxxxxx}
 \newcommand{\academicterm}{4A}
 \newcommand{\yourdiscipline}{Mechanical Engineering}
 \newcommand{\yourorganization}{Organization} % The company/organization you are writing this report for
+\newcommand{\reporttitle}{Title}
 
 
 \begin{document}
@@ -38,14 +39,14 @@
     \includegraphics[width=0.3\paperwidth]{uwlogo.jpg}
 
     \bigskip\bigskip\bigskip
-      \textbf{\huge{Title}}
+      \textbf{\huge{\reporttitle}}
 
     \bigskip\bigskip\bigskip
     \large{Prepared for}
 
       \bigskip
       {\setstretch{1.0}
-      \textit{Organization}
+      \yourorganization
 
       }
       \bigskip\bigskip
@@ -83,26 +84,22 @@
   \clearpage
   \pagenumbering{arabic}
   %
-  \section{examplesection} % examples of stuff
+  \section{Examplesection} % examples of stuff
     Here's a statement to be cited \cite{example}.
 
-    \lipsum
-    \subsection{examplesubsection}
+    \lipsum[1]
+    \subsection{Examplesubsection}
       Below you'll find a figure, which is Figure \ref{fig:examplefigure}.
-
-      \lipsum[1]
       \begin{figure}[h!]
         \centering
         \rule{1 cm}{1 cm}
         \caption[Short caption for List of Figures]{This is the long version of the caption, and appears next to the figure}
         \label{fig:examplefigure}
       \end{figure}
-      \lipsum[2]
+      \lipsum
   %
-  % Main Body
-  %   Introduction and/or background
-  %   Main stuff
-  % Conclusions and Recommendations
+  % Main body
+  % To add more sections or subsections, just use \section{section title} or \subsection{subsection title}
   %
   \clearpage
   \addcontentsline{toc}{section}{References}
@@ -113,6 +110,6 @@
   % Glossary if needed
   \begin{appendices}
     \section{Example appendix}
-      \lipsum[3]
+      Your text here
   \end{appendices}
 \end{document}
