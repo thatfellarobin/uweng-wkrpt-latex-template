@@ -1,0 +1,80 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[autostyle]{csquotes}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{tocloft}
+\usepackage[titletoc,title]{appendix}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage[parfill]{parskip}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\doublespacing
+\MakeOuterQuote{"}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Fill in the variables below %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dateofsubmittal}{}
+\newcommand{\department}{}
+\newcommand{\yourname}{}
+\newcommand{\youridnumber}{}
+\newcommand{\academicterm}{}
+\newcommand{\yourdiscipline}{}
+\newcommand{\yourorganization}{}
+\newcommand{\reporttitle}{}
+
+\begin{document}
+  \pagenumbering{gobble}
+  %
+  \input{titlepage.tex}
+  %
+  \input{letterofsubmittal.tex}
+  %
+  \clearpage
+  \tableofcontents\pagenumbering{roman}\setcounter{page}{1}
+  \clearpage
+  \addcontentsline{toc}{section}{\listfigurename}
+  \listoffigures
+  \clearpage
+  \addcontentsline{toc}{section}{\listtablename}
+  \listoftables
+  \clearpage
+  %
+  \section*{Summary}
+  %
+  \clearpage
+  \pagenumbering{arabic}
+  %
+  \section{Section 1}
+    Here's me referencing the section below: Section \ref{sec:section2}.
+
+    Here's me referencing the figure below: Figure \ref{fig:figurelabel}.
+    
+    Here's me doing an in-text citation: \cite{example}.
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.7\linewidth]{uwlogo.jpg} %This inserts your image and resizes it so that the width is 70% of the line width. There are lots of other ways to format your images but this is what I generally used.
+      \caption{Image caption}
+      \label{fig:figurelabel}
+    \end{figure}
+
+    \begin{equation*} %Un-numbered equation (remove asterisk for a numbered equation)
+      P_{cr}=\frac{C\pi^{2}EI}{l^{2}}
+    \end{equation*}
+    
+  \section{Section 2}
+    \label{sec:section2}
+  \subsection{Example Subsection}
+  \subsubsection{Example SubSubSection}
+  %
+  \clearpage
+  \addcontentsline{toc}{section}{References}
+  \bibliography{IEEEabrv,<bibfile>} %Replace <bibfile> with the name of your .bib file (without the .bib)
+  \bibliographystyle{IEEEtran}
+  \clearpage
+  %
+  \begin{appendices}
+    \section{First Appendix}
+  \end{appendices}
+\end{document}
