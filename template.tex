@@ -6,68 +6,30 @@
 \usepackage{lipsum}
 \usepackage{tocloft}
 \usepackage[titletoc,title]{appendix}
+\usepackage{siunitx}
+\usepackage{gensymb}
+\usepackage[parfill]{parskip}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \doublespacing
 \MakeOuterQuote{"}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Fill in the variables below %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\dateofsubmittal}{April 16, 2017}
-\newcommand{\department}{Department of Mechanical and Mechatronics Engineering}
-\newcommand{\yourname}{Robin Liu}
-\newcommand{\youridnumber}{20xxxxxx}
-\newcommand{\academicterm}{4A}
-\newcommand{\yourdiscipline}{Mechanical Engineering}
-\newcommand{\yourorganization}{Organization} % The company/organization you are writing this report for
-\newcommand{\reporttitle}{Title}
-
+\newcommand{\dateofsubmittal}{}
+\newcommand{\department}{}
+\newcommand{\yourname}{}
+\newcommand{\youridnumber}{}
+\newcommand{\academicterm}{}
+\newcommand{\yourdiscipline}{}
+\newcommand{\yourorganization}{}
+\newcommand{\reporttitle}{}
 
 \begin{document}
   \pagenumbering{gobble}
   %
-  % Title page
-  \begin{titlepage}
-    \vspace*{\fill}
-    \centering
-    {\setstretch{1.0}
-    {\large{University of Waterloo}
-
-    \large{\department}
-
-    }}
-    \bigskip
-    \includegraphics[width=0.3\paperwidth]{uwlogo.jpg}
-
-    \bigskip\bigskip\bigskip
-      \textbf{\huge{\reporttitle}}
-
-    \bigskip\bigskip\bigskip
-    \large{Prepared for}
-
-      \bigskip
-      {\setstretch{1.0}
-      \yourorganization
-
-      }
-      \bigskip\bigskip
-    \large{Prepared by}
-
-      \bigskip
-      {\setstretch{1.0}
-      \yourname
-
-      ID \youridnumber
-
-      \academicterm\:\yourdiscipline
-
-      }
-      \dateofsubmittal{}
-
-    \bigskip\bigskip
-    \vspace*{\fill}
-  \end{titlepage}
+  \input{titlepage.tex}
   %
-  \input{letterofsubmittal.tex} % Letter of Submittal
+  \input{letterofsubmittal.tex}
   %
   \clearpage
   \tableofcontents\pagenumbering{roman}\setcounter{page}{1}
@@ -79,37 +41,40 @@
   \listoftables
   \clearpage
   %
-  \input{summary.tex}
+  \section*{Summary}
   %
   \clearpage
   \pagenumbering{arabic}
   %
-  \section{Examplesection} % examples of stuff
-    Here's a statement to be cited \cite{example}.
+  \section{Section 1}
+    Here's me referencing the section below: Section \ref{sec:section2}.
 
-    \lipsum[1]
-    \subsection{Examplesubsection}
-      Below you'll find a figure, which is Figure \ref{fig:examplefigure}.
-      \begin{figure}[h!]
-        \centering
-        \rule{1 cm}{1 cm}
-        \caption[Short caption for List of Figures]{This is the long version of the caption, and appears next to the figure}
-        \label{fig:examplefigure}
-      \end{figure}
-      \lipsum
-  %
-  % Main body
-  % To add more sections or subsections, just use \section{section title} or \subsection{subsection title}
+    Here's me referencing the figure below: Figure \ref{fig:figurelabel}.
+    
+    Here's me doing an in-text citation: \cite{example}.
+    \begin{figure}[h!]
+      \centering
+      \includegraphics[width=0.7\linewidth]{uwlogo.jpg} %This inserts your image and resizes it so that the width is 70% of the line width. There are lots of other ways to format your images but this is what I generally used.
+      \caption{Image caption}
+      \label{fig:figurelabel}
+    \end{figure}
+
+    \begin{equation*} %Un-numbered equation (remove asterisk for a numbered equation)
+      P_{cr}=\frac{C\pi^{2}EI}{l^{2}}
+    \end{equation*}
+    
+  \section{Section 2}
+    \label{sec:section2}
+  \subsection{Example Subsection}
+  \subsubsection{Example SubSubSection}
   %
   \clearpage
   \addcontentsline{toc}{section}{References}
-  \bibliography{bibfile}
-  \bibliographystyle{ieeetr}
+  \bibliography{IEEEabrv,<bibfile>} %Replace <bibfile> with the name of your .bib file (without the .bib)
+  \bibliographystyle{IEEEtran}
   \clearpage
   %
-  % Glossary if needed
   \begin{appendices}
-    \section{Example appendix}
-      Your text here
+    \section{First Appendix}
   \end{appendices}
 \end{document}
