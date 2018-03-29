@@ -5,6 +5,5 @@ The template is designed to meet the requirements of University of Waterloo Engi
 
 There's a few examples inside about figures, equations, citations, cross-referencing. It's pretty much the basics. Tables are annoying but still relatively simple, just look up a few examples online and you'll be on your way.
 
-I used a reference manager called JabRef when I wrote my report, I found it dealt with IEEE pretty well. Use the IEEEtran reference type.
-
+I used a reference manager called JabRef when I wrote my report, I found it dealt with IEEE pretty well. Use the IEEEtran reference type. However, you'll need to go figure out how to get the IEEEtran reference type online. There's instructios somewhere, sorry I can't be more helpful! I've also found that BibDesk is pretty good.  
 This template was used to get an outstanding on my third work report :)
